@@ -96,7 +96,7 @@ class lista:
     def exportar(self):
         #Crea una variable llamada f donde se crea un archivo en la carpeta Inventario con el nombre de aa.dot
         try:
-            with open('Tecnoclinic/Inventario/Estructuras/aa.dot', 'w+',encoding='utf-8') as f:
+            with open('c:/aa.dot', 'w+',encoding='utf-8') as f:
                 f.write('digraph G {\n fontname="Helvetica,Arial,sans-serif" \n node [fontname="Helvetica,Arial,sans-serif"] \n edge [fontname="Helvetica,Arial,sans-serif"] \n')
                 f.write('a0 [shape=none label=< ')
                 f.write('<TABLE border="1"> \n <TR>')
@@ -114,7 +114,8 @@ class lista:
                     f.write('\n')
                 f.write('</TABLE>>];\n}')
             os.environ["PATH"] += os.pathsep + 'C:/Program Files/Graphviz/bin'
-            os.system('dot -Tpng Tecnoclinic/Inventario/Estructuras/aa.dot -o Tecnoclinic/Inventario/Estructuras/aa.png')
+            os.system('dot -Tpng c:/aa.dot -o c:/aa.png')
+            os.system('c:/aa.png')
             tk.messagebox.showinfo(title="Éxito", message="Inventario exportado exitosamente.")
         except Exception as e:
             print(e)

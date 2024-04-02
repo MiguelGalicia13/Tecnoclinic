@@ -344,6 +344,5 @@ class Ventana(tk.Tk):
     def exportar(self):
         inv.exportar()
         # Mostrar mensaje de éxito
-        
 ventana = Ventana()
 ventana.mainloop()
