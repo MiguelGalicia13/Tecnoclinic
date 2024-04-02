@@ -1,16 +1,51 @@
 [
     {
-        "nombre": "Producto 1",
-        "descripcion": "Este es el primer producto.",
-        "precio": 100.0,
-        "cantidad": 10,
-        "proveedor": "Proveedor 1"
+        "nombre": "Laptop Dell XPS 15",
+        "descripcion": "Laptop de alta gama con pantalla táctil 4K y procesador Intel Core i9.",
+        "precio": 2499.99,
+        "cantidad": 15,
+        "proveedor": "Dell Technologies"
     },
     {
-        "nombre": "Producto 2",
-        "descripcion": "Este es el segundo producto.",
-        "precio": 200.0,
-        "cantidad": 20,
-        "proveedor": "Proveedor 2"
+        "nombre": "Smartphone iPhone 13 Pro",
+        "descripcion": "Teléfono inteligente con cámara triple de 12 MP, pantalla Super Retina XDR y chip A15 Bionic.",
+        "precio": 1099.0,
+        "cantidad": 25,
+        "proveedor": "Apple Inc."
+    },
+    {
+        "nombre": "Monitor LG UltraGear 27GN950-B",
+        "descripcion": "Monitor gaming de 27 pulgadas con resolución 4K, frecuencia de actualización de 144Hz y tecnología Nano IPS.",
+        "precio": 799.99,
+        "cantidad": 10,
+        "proveedor": "LG Electronics"
+    },
+    {
+        "nombre": "Camiseta de algodón",
+        "descripcion": "Camiseta básica de algodón 100%. Disponible en varios colores.",
+        "precio": 15.99,
+        "cantidad": 50,
+        "proveedor": "Textiles del Sol"
+    },
+    {
+        "nombre": "Zapatos deportivos",
+        "descripcion": "Zapatos deportivos para running o entrenamiento. Cómodos y ligeros.",
+        "precio": 79.99,
+        "cantidad": 25,
+        "proveedor": "Deporte y Estilo"
+    },
+    {
+        "nombre": "Libro de cocina vegetariana",
+        "descripcion": "Recetas vegetarianas para todos los días. Incluye consejos e información nutricional.",
+        "precio": 24.95,
+        "cantidad": 15,
+        "proveedor": "Libros del Mundo"
+    },
+    {
+        "nombre": "Juego de mesa familiar",
+        "descripcion": "Juego de mesa para toda la familia. Divertido y educativo.",
+        "precio": 39.99,
+        "cantidad": 30,
+        "proveedor": "Juegos Divertidos"
     }
 ]
