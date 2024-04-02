@@ -1,3 +1,6 @@
+import sys, os
+import tkinter as tk
+
 class articulo:
     def __init__(self, ID, nombre, descrpcion, precio, cantidad, proveedor):
         self.ID = ID
@@ -80,4 +83,41 @@ class lista:
                 actual.articulo.proveedor = proveedor
                 return
             actual = actual.siguiente
-    
+    def delete(self, idin):
+        actual = self.primero
+        if actual.articulo.ID == idin:
+            self.primero = actual.siguiente
+            return
+        while actual.siguiente != None:
+            if actual.siguiente.articulo.ID == idin:
+                actual.siguiente = actual.siguiente.siguiente
+                return
+            actual = actual.siguiente
+    def exportar(self):
+        #Crea una variable llamada f donde se crea un archivo en la carpeta Inventario con el nombre de aa.dot
+        try:
+            with open('Tecnoclinic/Inventario/Estructuras/aa.dot', 'w+',encoding='utf-8') as f:
+                f.write('digraph G {\n fontname="Helvetica,Arial,sans-serif" \n node [fontname="Helvetica,Arial,sans-serif"] \n edge [fontname="Helvetica,Arial,sans-serif"] \n')
+                f.write('a0 [shape=none label=< ')
+                f.write('<TABLE border="1"> \n <TR>')
+                f.write('<TD> ID </TD> \n <TD> Nombre </TD>\n <TD> Descripcion </TD>\n <TD> Precio </TD>\n <TD> Cantidad </TD>\n <TD> Proveedor </TD> \n </TR>\n')
+                actual = self.primero
+                while actual != None:
+                    f.write('<TR> \n <TD>'+str(actual.articulo.ID)+'</TD> \n <TD>'+
+                            actual.articulo.nombre+'</TD> \n <TD>'+
+                            actual.articulo.descripcion+'</TD> \n <TD>'+
+                            str(actual.articulo.precio)+'</TD> \n <TD>'+
+                            str(actual.articulo.cantidad)+'</TD> \n <TD>'+
+                            actual.articulo.proveedor+'</TD> \n </TR>\n'
+                            )
+                    actual = actual.siguiente
+                    f.write('\n')
+                f.write('</TABLE>>];\n}')
+            os.environ["PATH"] += os.pathsep + 'C:/Program Files/Graphviz/bin'
+            os.system('dot -Tpng Tecnoclinic/Inventario/Estructuras/aa.dot -o Tecnoclinic/Inventario/Estructuras/aa.png')
+            tk.messagebox.showinfo(title="Éxito", message="Inventario exportado exitosamente.")
+        except Exception as e:
+            print(e)
+            return
+            
+
